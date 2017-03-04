@@ -17,13 +17,16 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     serialport.cpp \
-    rtdacinterface.cpp
+    rtdacinterface.cpp \
+    rtdacdialog.cpp
 
 HEADERS  += mainwindow.h \
     serialport.h \
-    rtdacinterface.h
+    rtdacinterface.h \
+    rtdacdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    rtdacdialog.ui
 
 unix|win32: LIBS += -L$$PWD/ -lRTDACAPI
 
