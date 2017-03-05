@@ -66,3 +66,8 @@ bool SerialPort::SendData( QString data )
     port->write( data.toStdString().c_str() );
     return true;
 }
+
+void SerialPort::SetPortName( QString pname )
+{
+    portname = pname;
+}

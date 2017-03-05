@@ -17,6 +17,7 @@ public:
     bool isOpen( );
     bool CloseConnection( );
     bool SendData( QString data );
+    void SetPortName( QString pname );
 
 
 signals:
