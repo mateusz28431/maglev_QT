@@ -27,3 +27,10 @@
 *.exe
 *.out
 *.app
+
+# moc and ui files
+moc*.cpp
+ui*.h
+
+# Makefiles
+Makefile*
