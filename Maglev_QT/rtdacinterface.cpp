@@ -2,7 +2,10 @@
 #include "RTDACAPI.h"
 RTDACInterface::RTDACInterface( )
 {
-
+    Mode = 1;
+    Presc = 0;
+    Brake = 0;
+    Dir = 1;
 }
 
 bool RTDACInterface::ConnectToBoard( )
@@ -58,4 +61,35 @@ bool RTDACInterface::SetDAValue ( int channel, uint value )
 int RTDACInterface::GetNoOfBoard( )
 {
     return NoOfBoards;
+}
+
+void RTDACInterface::InitializePWM( )
+{
+    WriteWord( BaseAddress + 0x44, Presc );
+    CtrlByte=(4*Brake + 2*Dir+ 1*Mode);
+}
+
+void RTDACInterface::setBrake( int br )
+{
+    Brake = (br>=1)? 1 : 0;
+    if ( NoOfBoards > 0 )
+    {
+        CtrlByte=(4*Brake + 2*Dir+ 1*Mode);
+        WriteByte ( BaseAddress + 0x40, (int) CtrlByte );
+    }
+}
+
+void RTDACInterface::Clean( )
+{
+    WriteByte ( BaseAddress + 0x40, (int) 0x00 );
+    WriteWord ( BaseAddress + 0x48, (int) 0x00 );
+}
+void RTDACInterface::setPWM( double PWMCtrl )
+{
+    if ( NoOfBoards > 0 )
+    {
+        if ( PWMCtrl > 100.0 ) PWMCtrl = 100.0;
+        if ( PWMCtrl < 0 ) PWMCtrl = 0.0;
+        WriteWord ( BaseAddress + 0x48, (int)(fabs( (PWMCtrl*4095)/100 )) );
+    }
 }
