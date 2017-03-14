@@ -24,14 +24,17 @@ private:
     bool connected;
     double current_value;
     double displacement_value;
-    uint dac_value;
+    uint pwm_value;
+    bool brake;
+
 
 private slots:
     void connect2RTDAC( );
     void measureCurrent( );
     void measureDisplacement( );
     void dacSliderChanged( int val );
-    void dacSet( );
+    void PWMSet( );
+    void Brake( );
 
 };
 

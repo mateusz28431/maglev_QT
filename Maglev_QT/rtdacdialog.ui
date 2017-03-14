@@ -296,12 +296,12 @@
         </font>
        </property>
        <property name="text">
-        <string>DAC:</string>
+        <string>PWM:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSlider" name="dacSlider">
+      <widget class="QSlider" name="pwmSlider">
        <property name="minimumSize">
         <size>
          <width>170</width>
@@ -318,7 +318,7 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="maximum">
-        <number>4095</number>
+        <number>100</number>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -326,7 +326,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="dacButton">
+      <widget class="QPushButton" name="pwmButton">
        <property name="minimumSize">
         <size>
          <width>90</width>
@@ -378,7 +378,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="dacDisp">
+      <widget class="QTextEdit" name="pwmDisp">
        <property name="minimumSize">
         <size>
          <width>70</width>
@@ -410,6 +410,30 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="brakeButton">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>90</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Brake</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -468,30 +492,10 @@
     </layout>
    </item>
   </layout>
-  <zorder>exitButton</zorder>
-  <zorder>dacSlider</zorder>
-  <zorder>connectButton</zorder>
-  <zorder>currentButton</zorder>
-  <zorder>dacButton</zorder>
-  <zorder>label</zorder>
-  <zorder>statusLabel</zorder>
-  <zorder>displacementButton</zorder>
-  <zorder>label_2</zorder>
-  <zorder>currentDisp</zorder>
-  <zorder>displacementDisp</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
-  <zorder>dacDisp</zorder>
-  <zorder>label_5</zorder>
-  <zorder>dacDisp</zorder>
-  <zorder>currentDisp</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>horizontalSpacer_2</zorder>
   <zorder>verticalSpacer</zorder>
   <zorder>verticalSpacer_2</zorder>
   <zorder>verticalSpacer_3</zorder>
   <zorder></zorder>
-  <zorder>horizontalSpacer_3</zorder>
  </widget>
  <resources/>
  <connections/>
