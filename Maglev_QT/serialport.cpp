@@ -56,7 +56,15 @@ void SerialPort::RecievedData( )
 {
     r_data = port->readAll( );
     QString temp = r_data;
-    emit RxData( temp );
+    r_data.clear();
+    int i = 0;
+    while (i <temp.size() )
+    {
+        QChar t = temp.at(i);
+        emit RxData( t );
+        i++;
+    }
+
 }
 
 bool SerialPort::SendData( QString data )

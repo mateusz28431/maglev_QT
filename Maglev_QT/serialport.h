@@ -21,7 +21,7 @@ public:
 
 
 signals:
-    void RxData( QString );
+    void RxData( QChar );
 public slots:
     void RecievedData( );
 };
