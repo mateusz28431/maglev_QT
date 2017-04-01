@@ -18,12 +18,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     serialport.cpp \
     rtdacinterface.cpp \
-    rtdacdialog.cpp
+    rtdacdialog.cpp \
+    measures.cpp \
+    jsonclass.cpp
 
 HEADERS  += mainwindow.h \
     serialport.h \
     rtdacinterface.h \
-    rtdacdialog.h
+    rtdacdialog.h \
+    measures.h \
+    jsonclass.h
 
 FORMS    += mainwindow.ui \
     rtdacdialog.ui
