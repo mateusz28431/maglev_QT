@@ -21,7 +21,7 @@ RTDACDialog::RTDACDialog(QWidget *parent) :
     connect( ui->displacementButton, SIGNAL( clicked(bool) ), this, SLOT( measureDisplacement() ) );
     connect( ui->pwmSlider, SIGNAL( valueChanged(int) ), this, SLOT( dacSliderChanged(int) ) );
     connect( ui->pwmButton, SIGNAL( clicked(bool) ), this, SLOT( PWMSet( ) ) );
-    connect( ui->brakeButton, SIGNAL( clicked(bool) ), this, SLOT( Brake( ) ) );
+
 }
 
 RTDACDialog::~RTDACDialog()
@@ -39,6 +39,7 @@ void RTDACDialog::connect2RTDAC( )
         connected = true;
         ui->statusLabel->setText( tr( "Połączony" ) );
         rtdac->InitializePWM( );
+        rtdac->setBrake( 0 );
     }
 }
 

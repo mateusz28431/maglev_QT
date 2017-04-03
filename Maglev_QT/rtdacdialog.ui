@@ -411,30 +411,6 @@
        </property>
       </spacer>
      </item>
-     <item>
-      <widget class="QPushButton" name="brakeButton">
-       <property name="minimumSize">
-        <size>
-         <width>90</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>90</width>
-         <height>30</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Brake</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
    <item>
