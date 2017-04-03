@@ -20,6 +20,19 @@ struct measures
 
 };
 
+enum cntr_src
+{
+    RTDAC = 0,
+    NUCLEO = 1
+};
+
+struct config
+{
+    uint8_t disNofP;
+    cntr_src cntr;
+    uint8_t cntrNofP;
+};
+
 measures ADC2real( ADC_measures* adc );
 
 #endif // MEASURES
