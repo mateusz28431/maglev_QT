@@ -20,17 +20,20 @@ SOURCES += main.cpp\
     rtdacinterface.cpp \
     rtdacdialog.cpp \
     measures.cpp \
-    jsonclass.cpp
+    jsonclass.cpp \
+    settingsdialog.cpp
 
 HEADERS  += mainwindow.h \
     serialport.h \
     rtdacinterface.h \
     rtdacdialog.h \
     measures.h \
-    jsonclass.h
+    jsonclass.h \
+    settingsdialog.h
 
 FORMS    += mainwindow.ui \
-    rtdacdialog.ui
+    rtdacdialog.ui \
+    settingsdialog.ui
 
 unix|win32: LIBS += -L$$PWD/ -lRTDACAPI
 
