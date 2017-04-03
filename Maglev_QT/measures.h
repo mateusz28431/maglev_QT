@@ -8,6 +8,7 @@ struct ADC_measures
     uint16_t Measure10;
     uint16_t Measure11;
     uint16_t Measure12;
+    unsigned long int Count;
 
 };
 

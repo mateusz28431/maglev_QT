@@ -27,6 +27,9 @@ void JsonClass::JSon2ADC( QString jsonstring, ADC_measures* m )
     temp =  json["voltage4"].toString( ) ;
     m->Measure12 = temp.toUInt( );
 
+    temp =  json["count"].toString( ) ;
+    m->Count = temp.toULong( );
+
 }
 
 QString JsonClass::CreateJson(config c, bool start)
