@@ -28,3 +28,19 @@ void JsonClass::JSon2ADC( QString jsonstring, ADC_measures* m )
     m->Measure12 = temp.toUInt( );
 
 }
+
+QString JsonClass::CreateJson(config c, bool start)
+{
+    QJsonObject jsonObj;
+
+    jsonObj.insert( "disNofP", c.disNofP );
+    jsonObj.insert( "cntrlSource", c.cntr );
+    jsonObj.insert( "cntrlNofP", c.cntrNofP );
+
+    if ( start )
+        jsonObj.insert( "start", 1 );
+    else
+        jsonObj.insert( "start", 0 );
+    QJsonDocument doc(jsonObj);
+    return doc.toJson( QJsonDocument::Compact );
+}
