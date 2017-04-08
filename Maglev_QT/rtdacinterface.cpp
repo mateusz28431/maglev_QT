@@ -88,8 +88,8 @@ void RTDACInterface::setPWM( double PWMCtrl )
 {
     if ( NoOfBoards > 0 )
     {
-        if ( PWMCtrl > 100.0 ) PWMCtrl = 100.0;
+        if ( PWMCtrl > 4095.0 ) PWMCtrl = 4095.0;
         if ( PWMCtrl < 0 ) PWMCtrl = 0.0;
-        WriteWord ( BaseAddress + 0x48, (int)(fabs( (PWMCtrl*4095)/100 )) );
+        WriteWord ( BaseAddress + 0x48, (int)(fabs( (PWMCtrl )) ) );
     }
 }
