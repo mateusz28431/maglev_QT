@@ -4,13 +4,19 @@ SerialPort::SerialPort( )
 {
     portname = "";
     r_data = "";
-    port = nullptr;
+    port = new QSerialPort( );
+    QObject::connect( port, SIGNAL(readyRead()), this, SLOT(RecievedData()) );
+    //port = nullptr;
 }
 
 SerialPort::~SerialPort( )
 {
     if ( port != nullptr )
+    {
         delete port;
+        port = nullptr;
+    }
+
 }
 
 SerialPort::SerialPort( QString pname )
