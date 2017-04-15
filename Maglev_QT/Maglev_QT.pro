@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui serialport
+QT       += core gui serialport printsupport
 
 QMAKE_CXXFLAGS += -std=c++0x
 
@@ -21,7 +21,10 @@ SOURCES += main.cpp\
     rtdacdialog.cpp \
     measures.cpp \
     jsonclass.cpp \
-    settingsdialog.cpp
+    settingsdialog.cpp \
+    terminaldialog.cpp \
+    plotsdialog.cpp \
+    qcustomplot.cpp
 
 HEADERS  += mainwindow.h \
     serialport.h \
@@ -29,11 +32,16 @@ HEADERS  += mainwindow.h \
     rtdacdialog.h \
     measures.h \
     jsonclass.h \
-    settingsdialog.h
+    settingsdialog.h \
+    terminaldialog.h \
+    plotsdialog.h \
+    qcustomplot.h
 
 FORMS    += mainwindow.ui \
     rtdacdialog.ui \
-    settingsdialog.ui
+    settingsdialog.ui \
+    terminaldialog.ui \
+    plotsdialog.ui
 
 unix|win32: LIBS += -L$$PWD/ -lRTDACAPI
 
