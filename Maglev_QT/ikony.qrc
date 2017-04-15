@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/new">
+        <file>ikony/info_icon.png</file>
+        <file>ikony/plot_icon.png</file>
+        <file>ikony/quit_icon.png</file>
+        <file>ikony/settings_icon.png</file>
+        <file>ikony/start_icon.png</file>
+        <file>ikony/stop_icon.png</file>
+        <file>ikony/terminal_icon.png</file>
+        <file>ikony/kcmpci.png</file>
+        <file>ikony/save_icon.png</file>
+    </qresource>
+</RCC>

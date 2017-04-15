@@ -47,3 +47,7 @@ unix|win32: LIBS += -L$$PWD/ -lRTDACAPI
 
 INCLUDEPATH += $$PWD/
 DEPENDPATH += $$PWD/
+
+RESOURCES += \
+    ikony.qrc
+
