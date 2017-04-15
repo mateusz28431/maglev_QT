@@ -51,3 +51,14 @@ DEPENDPATH += $$PWD/
 RESOURCES += \
     ikony.qrc
 
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/ -lled-designer-plugin
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/ -lled-designer-plugind
+
+INCLUDEPATH += $$PWD/
+DEPENDPATH += $$PWD/
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/libled-designer-plugin.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/libled-designer-plugind.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/led-designer-plugin.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/led-designer-plugind.lib
